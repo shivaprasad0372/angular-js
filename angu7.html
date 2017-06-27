@@ -1,0 +1,36 @@
+<html>
+<head>
+<script src="angular.min.js"></script>
+</head>
+<body ng-app="myApp">
+<table ng-controller="studentController" border="2" width="250px">
+<tr>
+<td>student number:</td>
+<td>{{student.sNo}}</td>
+</tr>
+<tr>
+<td>student name:</td>
+<td>{{student.sName}}</td>
+</tr><tr>
+<td>student course:</td>
+<td>{{student.sCourse}}</td>
+</tr>
+<tr>
+<td>student marks:</td>
+<td>{{student.marks}}</td>
+</tr>
+
+</table>
+<script>
+var obj=angular.module("myApp",[]);
+obj.controller("studentController",function($scope){
+$scope.student = {
+sNo:103,
+sName:"shiva",
+sCourse:"angularjs",
+marks:[22,33,21]
+};
+});
+</script>
+</body>
+</html>

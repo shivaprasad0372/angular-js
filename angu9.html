@@ -1,0 +1,20 @@
+<html>
+<head>
+<script src="angular.min.js"></script>
+</head>
+<body ng-app="myApp">
+<table ng-controller="demoController" border="2" width="200px">
+<tr ng-repeat="item in names | orderBy:item:true">
+<td>
+{{item}}
+</td>
+</tr>
+</table>
+<script>
+var obj=angular.module("myApp",[]);
+obj.controller("demoController",function($scope){
+$scope.names = ["shiva","prasad","kranthi"];
+});
+</script>
+</body>
+</html>

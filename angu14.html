@@ -1,0 +1,48 @@
+<html>
+<head>
+<script src="angular.min.js"></script>
+</head>
+<body ng-app="myApp">
+<h1>angular events examples</h1>
+<hr>
+<div ng-controller="eventController">
+enter firstNumber:<input type="text" ng-model="x"><br>
+enter secondNumber:<input type="text" ng-model="y"><br>
+<input type="button" ng-click='f1("+")' value="sum">
+<input type="button" ng-click='f1("-")' value="sub">
+<input type="button" ng-click='f1("*")' value="multi">
+<br>
+<span ng-style="myStyle">{{result}}</span>
+<script>
+var obj=angular.module("myApp",[]);
+obj.controller("eventController",function($scope){
+$scope.x = 0;
+$scope.y = 0;
+$scope.result = "";
+$scope.myStyle = {color:'red'};
+$scope.f1=function(arg){
+var z = 0;
+switch(arg)
+{
+case "+":
+z = parseInt($scope.x)+parseInt($scope.y);
+$scope.myStyle = {color:"red"};
+break;
+case "-":
+z = parseInt($scope.x)-parseInt($scope.y);
+$scope.myStyle = {color:'green'};
+break;
+case "*":
+z = parseInt($scope.x)* parseInt($scope.y);
+$scope.myStyle = {color:'blue'};
+break;
+}
+$scope.result = "result:"+z;
+}
+});
+
+
+</script>
+</div>
+</body>
+</html>

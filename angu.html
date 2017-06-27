@@ -1,0 +1,17 @@
+<html>
+<head>
+<script src="angular.min.js"></script>
+</head>
+<body ng-app="" ng-init="fname='download.jpg'">
+<hr>
+<select ng-model="fname">
+<option>download3.jpg</option>
+<option>download2.jpg</option>
+
+</select>
+<br>
+<span>selected images:{{fname}}</span><br>
+<img border="2" height="180px" width="300px" src="{{fname}}"/>
+
+</body>
+</html>

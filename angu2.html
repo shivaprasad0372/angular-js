@@ -1,0 +1,20 @@
+<html>
+<head>
+<script src="angular.min.js"></script>
+</head>
+<body ng-app="" ng-init="aray=['html','css','javascript','angularjs','angular2','nodejs']">
+<hr>
+<table border="2">
+<tr>
+<th>s.no</th>
+<th>course name</th>
+</tr>
+<tr ng-repeat="item in aray">
+<td>{{$index+1}}</td>
+<td>{{item}}</td>
+</tr>
+</table>
+
+
+</body>
+<html>

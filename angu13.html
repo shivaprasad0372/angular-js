@@ -1,0 +1,37 @@
+<html>
+<head>
+<script src="angular.min.js"></script>
+</head>
+
+<body ng-app="myApp">
+<h1>this is about event examples</h1>
+<hr>
+<div ng-controller = "eventController">
+username:<input type="text" ng-model="uid"><br>
+password:<input type="password" ng-model="pwd"><br>
+<input type="button" ng-click="login()" value="login"><br>
+<span style="color:{{str}}">{{mesage}}</span>
+</div>
+<script>
+var obj = angular.module("myApp",[]);
+obj.controller("eventController",function($scope){
+$scope.uid = "";
+$scope.pwd = "";
+$scope.mesage = "";
+$scope.str = "black";
+$scope.login = function(){
+if($scope.uid == "admin" && $scope.pwd == "password"){
+$scope.mesage = "welcome to admin";
+$scope.str = "green";
+}else{
+$scope.mesage = "invalid username and password";
+$scope.str = "red";
+}
+}
+
+});
+
+
+</script>
+</body>
+</html>

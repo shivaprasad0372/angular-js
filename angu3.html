@@ -1,0 +1,26 @@
+<html>
+<head>
+<script src="angular.min.js"></script>
+</head>
+<body ng-app="myApp">
+<h1>angular js controllers</h1>
+<hr>
+<div ng-controller="empController">
+<span>
+emp Id:{{empNo}}<br>
+emp Name:{{empName}}<br>
+emp Job: {{empJob}}
+</span>
+</div>
+<script>
+var obj=angular.module("myApp",[]);
+obj.controller("empController",function($scope){
+$scope.empNo = 108;
+$scope.empName = "shiva";
+$scope.empJob = "angular developer";
+});
+
+
+</script>
+</body>
+</html>

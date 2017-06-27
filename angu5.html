@@ -1,0 +1,31 @@
+<html>
+<head>
+<script src="angular.min.js"></script>
+</head>
+<body ng-app="myApp">
+<table ng-controller="depController" border="2">
+<tr>
+<th>depNo</th>
+<th>depName</th>
+<th>depLocation</th>
+</tr>
+<tr>
+<td>{{depNo}}</td>
+<td>{{depName}}</td>
+<td>{{depLocation}}</td>
+</tr>
+</table>
+
+<script>
+var obj=angular.module("myApp",[]);
+obj.controller("depController",function($scope){
+$scope.depNo=10;
+$scope.depName="Angular js";
+$scope.depLocation = "Hyderabad";
+});
+
+
+</script>
+</body>
+
+</html>

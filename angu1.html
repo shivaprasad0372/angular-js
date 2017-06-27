@@ -1,0 +1,15 @@
+<html>
+<head>
+<script src="angular.min.js"></script>
+</head>
+<body ng-app="" ng-init="w=300,h=150">
+<hr>
+height:<input type="range" ng-Model="h" min="100" max="200"/>
+<br>
+width:<input type="range" ng-Model="w" min="100" max="500"/>
+<br>
+<span>{{h}},{{w}}</span><br>
+<img border="2" height="{{h}}px" width="{{w}}px" src="download.jpg">
+
+</body>
+</html>

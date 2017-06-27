@@ -1,0 +1,34 @@
+<html>
+<head>
+<script src="angular.min.js"></script>
+</head>
+<body ng-app="myApp">
+<h1>this is about multiple controllers</h1>
+<div ng-controller="empController">
+<input type="text" ng-model="empNo"/><br>
+<input type="text" ng-model="empName"/><br>
+<input type="text" ng-model="empJob"/><br>
+<span>
+emp Id:{{empNo}}<br>
+emp Name:{{empName}}<br>
+emp Job: {{empJob}}
+
+</span>
+
+
+</div>
+
+
+<script>
+var obj=angular.module("myApp",[]);
+obj.controller("empController",function($scope){
+$scope.empNo = 103;
+$scope.empName = "shiva";
+$scope.empJob = "angular2 developer";
+});
+
+</script>
+</body>
+
+
+</html>

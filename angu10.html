@@ -1,0 +1,33 @@
+<html>
+<head>
+<script src="angular.min.js"></script>
+</head>
+<body ng-app="myApp">
+<div ng-controller="deController">
+descending order:<input type="checkbox" ng-model="x"/><br>
+<table border="2" width="250px">
+<tr bgcolor="skyBlue">
+<th>student Name</th>
+<th>Course name</th>
+</tr>
+<tr ng-repeat="item in students">
+<td>{{item.sName}}</td>
+<td>{{item.course}}</td>
+</tr>
+</table>
+</div>
+
+<script>
+var obj = angular.module("myApp",[]);
+obj.controller("deController",function($scope){
+$scope.students=[
+{sName : "shiva",course: "angularjs"},
+{sName : "prasad", course: "html"},
+{sName : "kranthi", course: "jquery"},
+{sName : "keerthi", course: "java"}
+];
+$scope.x = false;
+});
+</script>
+</body>
+</html>

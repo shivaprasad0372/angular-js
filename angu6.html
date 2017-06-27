@@ -1,0 +1,21 @@
+<html>
+<head>
+<script src="angular.min.js"></script>
+</head>
+<body ng-app="myApp">
+<div ng-controller="stdController">
+<ul>
+<li ng-repeat="result in marks">
+{{index+1}}={{result}}
+</li>
+</ul>
+</div>
+<script>
+var obj=angular.module("myApp",[]);
+obj.controller("stdController",function($scope){
+$scope.marks=[22,21,44,453,55,32,232,4,32];
+});
+
+</script>
+</body>
+</html>

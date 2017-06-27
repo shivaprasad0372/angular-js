@@ -1,0 +1,42 @@
+<html>
+<head>
+<script src="angular.min.js"></script>
+</head>
+<body ng-app="myApp">
+<h1>this is about optional angular</h1>
+<hr>
+<div ng-controller="appController">
+Enter Student Name:<input type="text" ng-model="s1"/><br>
+Select Course:
+<select ng-model = "s2">
+<option>angular</option>
+<option>nodejs</option>
+<option>angular2 & 4</option>
+</select><br>
+<table border="2" width="250px">
+<tr bgcolor="skyBlue">
+<th>student Id</th>
+<th>student Name</th>
+<th>Course Name</th>
+</tr>
+<tr bgcolor="pink" ng-repeat="item in student|filter{'name':s1,'course':s2}">
+<td>{{id}}</td>
+<td>{{name}}</td>
+<td>{{course}}</td>
+</tr>
+</table>
+</div>
+<script>
+var obj=angular.module("myApp",[]);
+obj.controller("appController",function($scope){
+$scope.student=[
+{id:100,name:"shivaprasad",course:"angular"},
+{id:101,name:"kranthi",course:"nodejs"},
+{id:102,name:"keerthi",course:"angular2 & 4"}
+];
+$scope.s1 = " ";
+$scope.s2 = " ";
+});
+</script>
+</body>
+</html>
